@@ -1,8 +1,93 @@
+<!-- Output copied to clipboard! -->
 
-Cheet sheet - https://www.codecademy.com/learn/learn-ruby/modules/learn-ruby-introduction-to-ruby-u/cheatsheet
+<!-----
+
+You have some errors, warnings, or alerts. If you are using reckless mode, turn it off to see inline alerts.
+* ERRORs: 0
+* WARNINGs: 0
+* ALERTS: 5
+
+Conversion time: 1.527 seconds.
+
+
+Using this Markdown file:
+
+1. Paste this output into your source file.
+2. See the notes and action items below regarding this conversion run.
+3. Check the rendered output (headings, lists, code blocks, tables) for proper
+   formatting and use a linkchecker before you publish this page.
+
+Conversion notes:
+
+* Docs to Markdown version 1.0β33
+* Tue Jun 07 2022 03:59:57 GMT-0700 (PDT)
+
+
+* Source doc: Ruby_notes
+----->
+
+
+<p style="color: red; font-weight: bold">>>>>>  gd2md-html alert:  ERRORs: 0; WARNINGs: 0; ALERTS: 5.</p>
+<ul style="color: red; font-weight: bold"><li>See top comment block for details on ERRORs and WARNINGs. <li>In the converted Markdown or HTML, search for inline alerts that start with >>>>>  gd2md-html alert:  for specific instances that need correction.</ul>
+
+<p style="color: red; font-weight: bold">Links to alert messages:</p><a href="#gdcalert1">alert1</a>
+<a href="#gdcalert2">alert2</a>
+<a href="#gdcalert3">alert3</a>
+<a href="#gdcalert4">alert4</a>
+<a href="#gdcalert5">alert5</a>
+
+<p style="color: red; font-weight: bold">>>>>> PLEASE check and correct alert issues and delete this message and the inline alerts.<hr></p>
+
 
 
 # \\\RUBY NOTES///
+
+
+## Ruby Foundations
+
+Notes taken while following the chapters found here - [https://github.com/makersacademy/ruby_foundations/blob/main/chapter1/README.md](https://github.com/makersacademy/ruby_foundations/blob/main/chapter1/README.md)
+
+Cheat sheet [https://www.codecademy.com/learn/learn-ruby/modules/learn-ruby-introduction-to-ruby-u/cheatsheet](https://www.codecademy.com/learn/learn-ruby/modules/learn-ruby-introduction-to-ruby-u/cheatsheet)
+
+
+## Learning Objectives 
+
+Working towards 6 of the modules 10 objectives. 
+
+
+
+* Execute Ruby code in two different ways 👈
+* Make a plan using problem decomposition and experimentation 👈
+* Describe and use variables 👈
+* Describe and use conditionals 👈
+* Describe and use arrays
+* Describe and use hashes
+* Describe and use methods 👈
+* Describe and use classes
+
+
+### Intro to Ruby
+
+Ruby was created by Yukihiro Matsumoto (affectionately known as "Matz"), with the goal of being pleasant or, in his words, "natural" to use. If it's your first programming language, it might not feel very natural to begin with, but you'll get there and when you start to learn a second language you'll be able to make some interesting comparisons.
+
+
+#### Strings
+
+
+
+* Strings are one of Ruby's data types, they can store letters, numbers symbols/special characters so long as they are enclosed by double quote “ “. You can type a string into the Ruby interpreter and it will echo it back.
+* Strings can be manipulated, you can join two strings together by “concatenating” them using the plus + symbol. Eg `"string1" + "string2"` outputs `"string1string2"`. The output is also called the “return value”.
+
+
+#### Variables 
+
+
+
+* Variables act as containers for information. We can give a variable a value by using the assignment operator =. Eg `greeting = "hello world"`. This is also sometimes called “declaring”. 
+* Variables can be reassigned to different values, you do this by simply using the = operator to assign a new value to a variable that already exists, so we could change our greeting from “hello world” to “goodbye world” like so; greeting = “goodbye world”
+
+
+# Original Notes From Codecademy Course
 
 
 ## Everything is an object!
@@ -15,6 +100,11 @@ Everything in Ruby is an object! This means everything in ruby has built-in abil
 * Interpreted, meaning you don’t need a compiler to write and run Ruby. You can write it here at  Codecademy or even on your own computer (many are shipped with the Ruby interpreter built in—we’ll get to the interpreter later in this lesson).
 * Object-oriented, meaning it allows users to manipulate data structures called objects in order to build and execute programs. We’ll learn more about objects later, but for now, all you need to know is everything in Ruby is an object.
 * Easy to use. Ruby was designed by Yukihiro Matsumoto (often just called “Matz”) in 1995. Matz set out to design a language that emphasized human needs over those of the computer, which is why Ruby is so easy to pick up.
+
+
+### Ruby Chapter 1
+
+https://mastery-curriculum.makers.tech/chapter1/
 
 
 #### DATA TYPES
