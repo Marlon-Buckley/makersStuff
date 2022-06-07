@@ -1,4 +1,4 @@
-# \\\RUBY NOTES//
+# \\\RUBY NOTES///
 
 
 ## Ruby Foundations
@@ -23,16 +23,20 @@ Working towards 6 of the modules 10 objectives.
 * Describe and use methods 👈
 * Describe and use classes
 
+[TOC]
 
-### Chapter 1 - Intro to Ruby
+
+
+
+### Chapter 1 - Intro to Ruby {#chapter-1-intro-to-ruby}
 
 Ruby was created by Yukihiro Matsumoto (affectionately known as "Matz"), with the goal of being pleasant or, in his words, "natural" to use. If it's your first programming language, it might not feel very natural to begin with, but you'll get there and when you start to learn a second language you'll be able to make some interesting comparisons.
 
 
-### Data Types
+### Data Types {#data-types}
 
 
-#### Strings
+#### Strings {#strings}
 
 
 
@@ -40,7 +44,7 @@ Ruby was created by Yukihiro Matsumoto (affectionately known as "Matz"), with th
 * Strings can be manipulated, you can join two strings together by “concatenating” them using the plus + symbol. Eg `"string1" + "string2"` outputs `"string1string2"`. The output is also called the “return value”.
 
 
-#### Variables 
+#### Variables  {#variables}
 
 
 
@@ -48,7 +52,7 @@ Ruby was created by Yukihiro Matsumoto (affectionately known as "Matz"), with th
 * Variables can be reassigned to different values, you do this by simply using the = operator to assign a new value to a variable that already exists, so we could change our greeting from “hello world” to “goodbye world” like so; greeting = “goodbye world”
 
 
-#### Booleans
+#### Booleans {#booleans}
 
 
 
@@ -56,7 +60,7 @@ Ruby was created by Yukihiro Matsumoto (affectionately known as "Matz"), with th
 * Never use " or ' with Booleans, Ruby will think you're talking about a string!
 
 
-#### Numbers
+#### Numbers {#numbers}
 
 
 
@@ -67,12 +71,12 @@ Ruby was created by Yukihiro Matsumoto (affectionately known as "Matz"), with th
 Other Ruby data types are listed below. These include arrays, hashes, and symbols [https://www.codecademy.com/resources/docs/ruby/data-types](https://www.codecademy.com/resources/docs/ruby/data-types)
 
 
-##### Return Values
+##### Return Values {#return-values}
 
 A return value is the output from some Ruby code being executed. These values can be used with methods and more. 
 
 
-##### String Manipulations
+##### String Manipulations {#string-manipulations}
 
 
 ```
@@ -97,12 +101,12 @@ greeting = firstWord + secondWord
 
 
 
-##### Error Messages
+##### Error Messages {#error-messages}
 
 If you type a string without quotes surrounding it into the Ruby interpreter ruby will return an error like.
 
 
-###### Undefined Variables Or Methods
+###### Undefined Variables Or Methods {#undefined-variables-or-methods}
 
 
 ```
@@ -129,7 +133,7 @@ In the above example the following indicates that the error in the code is on li
 
 
 
-###### Unsupported Operations (joining strings to integers)
+###### Unsupported Operations (joining strings to integers) {#unsupported-operations-joining-strings-to-integers}
 
 Sometimes Ruby will return an error when attempting to perform an unsupported operation. For example when trying to concatenate a string to a number you’ll get a TypeError like so;
 
@@ -148,8 +152,83 @@ TypeError (String can't be coerced into Integer)
 
 
 
-##### String Interpolation
+##### String Interpolation {#string-interpolation}
 
-          "Stevie" => "cat",
+We've already covered how you can join strings together with concatenation by using the `+` operator. We can also join strings together by storing them in variables and then concatinating the variables likes so;
 
-         
+
+```
+> first_name + surname
+> => "Yukihiro Matsumoto"
+```
+
+
+Another way to do this is to use 'interpolation' to insert the contents of a variable into a string. Eg;
+
+
+```
+> name = 'Mina'
+=> 'Mina'
+
+> "Hello #{name}, how are you today?"
+> => "Hello Mina, how are you today?"
+```
+
+
+So where as I could do this like so; 
+
+
+```
+> "Hello " + "my name is " + name + " I am " + age + "years old."
+ => "Hello my name is Marlon I am 26years old."
+```
+
+
+I could insert use interpolation to make that a bit easier like this;
+
+
+```
+"Hello my name is #{name} I am #{age} years old."
+ => "Hello my name is Marlon I am 26 years old."
+```
+
+
+That’s a lot less plus signs and a bit easier to read too! A similar thing can be done in Python with f strings. 
+
+
+#### Methods {#methods}
+
+String methods like .length .upcase, .swapcase etc can be used to change strings. You can use these individually like so;
+
+
+```
+> name
+ => "Marlon"
+> name.upcase
+ => "MARLON"
+```
+
+
+ 
+
+
+```
+> name.reverse
+ => "nolraM"
+```
+
+
+
+##### Method Chaining
+
+ \
+As in the above example you can also chain together methods to do more things with less code. Eg;
+
+
+```
+> name.upcase.reverse
+ => "NOLRAM"
+```
+
+
+In this example, one line of code first converts the string to uppercase and then reverse the order of the characters. 
