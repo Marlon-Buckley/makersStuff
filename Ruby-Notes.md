@@ -12,15 +12,15 @@ Cheatsheet - [https://www.codecademy.com/learn/learn-ruby/modules/learn-ruby-int
 
 
 
-### Chapter 1 - Intro to Ruby
+### Chapter 1 - Intro to Ruby {#chapter-1-intro-to-ruby}
 
 Ruby was created by Yukihiro Matsumoto (affectionately known as "Matz"), with the goal of being pleasant or, in his words, "natural" to use. If it's your first programming language, it might not feel very natural to begin with, but you'll get there and when you start to learn a second language you'll be able to make some interesting comparisons.
 
 
-### Data Types
+### Data Types {#data-types}
 
 
-#### Strings
+#### Strings {#strings}
 
 
 
@@ -28,7 +28,7 @@ Ruby was created by Yukihiro Matsumoto (affectionately known as "Matz"), with th
 * Strings can be manipulated, you can join two strings together by “concatenating” them using the plus + symbol. Eg `"string1" + "string2"` outputs `"string1string2"`. The output is also called the “return value”.
 
 
-#### Variables 
+#### Variables  {#variables}
 
 
 
@@ -36,7 +36,7 @@ Ruby was created by Yukihiro Matsumoto (affectionately known as "Matz"), with th
 * Variables can be reassigned to different values, you do this by simply using the = operator to assign a new value to a variable that already exists, so we could change our greeting from “hello world” to “goodbye world” like so; greeting = “goodbye world”
 
 
-#### Booleans
+#### Booleans {#booleans}
 
 
 
@@ -44,7 +44,7 @@ Ruby was created by Yukihiro Matsumoto (affectionately known as "Matz"), with th
 * Never use " or ' with Booleans, Ruby will think you're talking about a string!
 
 
-#### Numbers
+#### Numbers {#numbers}
 
 
 
@@ -55,12 +55,12 @@ Ruby was created by Yukihiro Matsumoto (affectionately known as "Matz"), with th
 Other Ruby data types are listed below. These include arrays, hashes, and symbols [https://www.codecademy.com/resources/docs/ruby/data-types](https://www.codecademy.com/resources/docs/ruby/data-types)
 
 
-##### Return Values
+##### Return Values {#return-values}
 
 A return value is the output from some Ruby code being executed. These values can be used with methods and more. 
 
 
-##### String Manipulations
+##### String Manipulations {#string-manipulations}
 
 
 ```
@@ -85,12 +85,12 @@ greeting = firstWord + secondWord
 
 
 
-##### Error Messages
+##### Error Messages {#error-messages}
 
 If you type a string without quotes surrounding it into the Ruby interpreter ruby will return an error like.
 
 
-###### Undefined Variables Or Methods
+###### Undefined Variables Or Methods {#undefined-variables-or-methods}
 
 
 ```
@@ -117,7 +117,7 @@ In the above example the following indicates that the error in the code is on li
 
 
 
-###### Unsupported Operations (joining strings to integers)
+###### Unsupported Operations (joining strings to integers) {#unsupported-operations-joining-strings-to-integers}
 
 Sometimes Ruby will return an error when attempting to perform an unsupported operation. For example when trying to concatenate a string to a number you’ll get a TypeError like so;
 
@@ -136,7 +136,7 @@ TypeError (String can't be coerced into Integer)
 
 
 
-##### String Interpolation
+##### String Interpolation {#string-interpolation}
 
 We've already covered how you can join strings together with concatenation by using the `+` operator. We can also join strings together by storing them in variables and then concatinating the variables likes so;
 
@@ -180,12 +180,12 @@ I could insert use interpolation to make that a bit easier like this;
 That’s a lot less plus signs and a bit easier to read too! A similar thing can be done in Python with f strings. 
 
 
-#### Methods
+#### Methods {#methods}
 
 Methods do things to objects in Ruby. Later on we’ll learn about how to define methods. 
 
 
-##### String Methods
+##### String Methods {#string-methods}
 
 String methods like .length .upcase, .swapcase etc can be used to change strings. You can use these individually like so;
 
@@ -202,8 +202,10 @@ String methods like .length .upcase, .swapcase etc can be used to change strings
 
 There are 183 string methods in ruby 3.01, you only need to remember a few of them. You can google and find lists of them to reference in future.
 
+https://ruby-doc.org/core-3.1.1/String.html
 
-##### Method Chaining
+
+###### Method Chaining {#method-chaining}
 
 As in the above example you can also chain together methods to do more things with less code. Eg;
 
@@ -217,7 +219,7 @@ As in the above example you can also chain together methods to do more things wi
 In this example, one line of code first converts the string to uppercase and then reverse the order of the characters. 
 
 
-###### Errors To Be Aware Of
+###### Errors To Be Aware Of {#errors-to-be-aware-of}
 
 Be aware, some methods cannot be chained together and will return errors. For example the below code block will return an error. 
 
@@ -236,3 +238,171 @@ NoMethodError (undefined method `upcase' for 6:Integer)
 
 
 This error is appearing because you cannot call the `.upcase` method on the return value of `name.length `the `.upcase` method can only be called on strings. The return value is an integer, `5`, the length of the string `"Marlon"` !
+
+
+#### Other Data Types & Methods
+
+You can use methods on the other data types in Ruby. Arrays/Hashes will be covered later on.
+
+
+
+* Integers
+* Floats
+* Symbols
+* Booleans
+* Arrays
+* Hashes
+
+
+###### Integers 
+
+These are whole numbers, not decimals. You can perform standard math operations such as +, / *, - etc.
+
+There are also some other useful functions that can be performed on numbers like;
+
+
+```
+> 1.odd?
+=> true
+> 3.even?
+=> false
+> 10.next
+=> 11
+```
+
+
+See more Integer methods in the Ruby docs - [https://ruby-doc.org/core-3.0.0/Integer.html](https://ruby-doc.org/core-3.0.0/Integer.html)
+
+Keep in mind when dividing an integer by another integer the return value will always be an integer. 
+
+
+###### Floats
+
+Floats are decimal values. Numbers with decimal points in them! Floats are called as such because the decimal point can ‘float’ to any position in a number. All the basic math operators can be used on floats too. 
+
+
+```
+> 10 / 3.0
+=> 3.3333333333333335
+> 10.0 / 3
+=> 3.3333333333333335
+```
+
+
+Floats have their own methods too - [https://ruby-doc.org/core-3.0.0/Float.html](https://ruby-doc.org/core-3.0.0/Float.html)
+
+
+###### Symbols
+
+These are like strings but used mainly by programmers. Symbols are a sequence of characters without spaces and with a colon at the start. If you want to start a symbol with a digit, you need to enclose it in quotes see - [https://stackoverflow.com/a/38904016](https://stackoverflow.com/a/38904016)
+
+
+```
+# these are valid symbols
+> :hello
+=> :hello
+> :RUBY
+=> :RUBY
+
+# you can assign symbols to variables
+> greeting = :hello
+
+# and call methods on them
+> greeting.upcase
+=> :HELLO
+> greeting.length
+=> 5
+> greeting.to_s
+=> "hello"
+```
+
+
+
+###### Booleans {#booleans}
+
+These are a special data type, they are named after George Boole. Booleans can only have two values, `true` and `false`.
+
+A ruby method ending with ? usually is boolean. Eg `1.odd?` And “this is not empty”.empty?
+
+[https://docs.ruby-lang.org/en/2.0.0/syntax/methods_rdoc.html#label-Method+Names](https://docs.ruby-lang.org/en/2.0.0/syntax/methods_rdoc.html#label-Method+Names) - “Methods that end with a question mark do not always return just true or false. Often they will may return an object to indicate a true value (or “truthy” value).” 
+
+You can combine booleans with logical operations. Some examples are;
+
+
+```
+> # to return true, both sides must be true
+> true && true
+=> true
+> true && false
+=> false
+> false && true
+=> false
+> # to return true, only one side needs to be true
+> true || false
+=> true
+> false || true
+=> true
+> true || true
+=> true
+```
+
+
+
+##### Arguments
+
+Arguments are used with methods to provide extra information to the method on what you would like to do. For example if I wanted to remove a specific character from a string using the `.delete` method. I’d need to specify that character within an argument! Eg;
+
+
+```
+> name = "Marlon"
+ => "Marlon"
+> name.delete("M")
+ => "arlon"
+```
+
+
+Arguments in ruby don’t need to be surrounded by parentheses but it's a good habit to get into because other languages rely on them. 
+
+
+###### Multiple Arguments
+
+Some methods will require or accept multiple arguments. For example if I wanted to replace all the a’s in my name with o’s I would do so like this;
+
+
+```
+> name = "Marlon"
+ => "Marlon"
+> name.gsub("a", "o")
+ => "Morlon"
+```
+
+
+The arguments need to be within quotes and separated by commas. You can use gsub to replace a sequence of letters with another sequence. Eg;
+
+
+```
+> name = "Marlon"
+> name.gsub("arl", "orp")
+ => "Morpon"
+```
+
+
+
+###### Argument Errors
+
+Some methods require a specific amount of arguments or at least one. If you don’t provide the correct amount of arguments you’ll be presented with an error. Eg;
+
+
+```
+> name.gsub
+Traceback (most recent call last):
+    	5: from /Users/marlon.buckley/.rvm/rubies/ruby-3.0.0/bin/irb:23:in `<main>'
+    	4: from /Users/marlon.buckley/.rvm/rubies/ruby-3.0.0/bin/irb:23:in `load'
+    	3: from /Users/marlon.buckley/.rvm/rubies/ruby-3.0.0/lib/ruby/gems/3.0.0/gems/irb-1.3.0/exe/irb:11:in `<top (required)>'
+    	2: from (irb):78:in `<main>'
+    	1: from (irb):78:in `gsub'
+ArgumentError (wrong number of arguments (given 0, expected 1..2))
+```
+
+
+This error is coming up because the .gsub method expects 2 arguments, the character to replace and the character to replace with!
