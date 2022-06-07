@@ -406,3 +406,6 @@ ArgumentError (wrong number of arguments (given 0, expected 1..2))
 
 
 This error is coming up because the .gsub method expects 2 arguments, the character to replace and the character to replace with!
+
+
+Finished up at https://github.com/makersacademy/ruby_foundations/blob/main/chapter1/06_conditionals.md for today 07/06/2022
