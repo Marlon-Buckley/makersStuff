@@ -1,4 +1,4 @@
-# \\\RUBY NOTES///
+# \\\RUBY NOTES//
 
 
 ## Ruby Foundations
