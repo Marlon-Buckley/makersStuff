@@ -408,4 +408,107 @@ ArgumentError (wrong number of arguments (given 0, expected 1..2))
 This error is coming up because the .gsub method expects 2 arguments, the character to replace and the character to replace with!
 
 
-Finished up at https://github.com/makersacademy/ruby_foundations/blob/main/chapter1/06_conditionals.md for today 07/06/2022
+## Learning Reflections 07/06/2022
+
+Finished up at [https://github.com/makersacademy/ruby_foundations/blob/main/chapter1/06_conditionals.md](https://github.com/makersacademy/ruby_foundations/blob/main/chapter1/06_conditionals.md) 
+
+
+
+* Covered the basics of Ruby data types, defining variables, manipulating strings using methods.
+* Chaining methods together to do multiple things at once. 
+* Used basic arguments with different methods like .gsub and .delete. 
+* Basics of troubleshooting error messages, type errors, argument errors, undefined variables etc. 
+
+
+#### Conditionals
+
+Sometimes you want your code to execute only if a specific thing happens, or doesn’t happen, or say a piece of text includes a specific letter or string. This is where control flow/conditionals comes into play. 
+
+
+##### If / Else Statements
+
+In the below example, our if else statement is checking whether the string stored in the `name` variable is greater than 25 ( `> 25` ) . If it is greater, the string beneath it will be returned. Else, the second string will be returned. 
+
+
+```
+> name = "Marlon Buckley"
+> if(name.length > 25)
+>   "that's a very long name"
+> else
+>   "that's not a very long name"
+> end
+```
+
+
+If else will execute either or side of the if/else. In this case because the if is false, the else is what is returned. These statements must always finish with an `end`!\
+
+
+##### Elsif Statements
+
+Sometimes you’ll have more than one condition you’d like to check. This is where an `elsif` statement comes in handy. In this case, the code will check each condition until one of them is true, in the below example this means that the code returns `"That's not a particularly long name"`.
+
+
+```
+name = "Marlon Buckley"
+> if(name.length > 25)
+>   return "That's very a long name"
+> elsif(name.length > 20)
+>   return "That's a long name"
+> else
+>   return "That's not a particularly long name"
+> end
+```
+
+
+
+#### Defining Methods
+
+Methods are like Functions in other languages. They allow you to store a block of code that can do something. This block aka Method aka Function can then be called later on in your program. 
+
+You can create your own method with the `def` keyword like so;
+
+
+```
+def howOld(age)
+	puts "You are #{age} years old!"
+end
+```
+
+
+This won’t actually do anything (ie output to terminal) because we’ve not given age a value and we’ve not called the method! We first need to provide a value for the age argument. 
+
+
+```
+puts "How old are you?"
+personsAge = gets.chomp
+
+def howOld(age)
+	puts "You are #{age} years old!"
+end
+
+howOld(personsAge)
+```
+
+
+In the above example we prompt the user with a question using puts we then define a variable for `personsAge` and use the `gets.chomp` methods chained together to prompt the user and take input. This input is stored in the variable. It is this variable which we include in the call to the `howOld` function on the last line. 
+
+If we wanted to add some checking into this, for example, based on whether the persons age is greater than a certain number we could return two different strings like so;
+
+
+```
+puts "How old are you?"
+personsAge = gets.chomp
+
+def howOld(age)
+	if age.to_i > 25
+    	"You are #{age} years old!, that's pretty old!"
+	else
+    	"You are #{age} years old!, that's pretty young!"\
+	end
+end
+
+puts howOld(personsAge)
+```
+
+
+We have to make sure we use `end` to finish of both the `if, else` and the method!
