@@ -1,0 +1,3 @@
+text_to_input = "Hello" * 250
+
+puts text_to_input
