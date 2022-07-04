@@ -1,0 +1,46 @@
+
+
+#Using Button value
+
+click_button 'Click me!'
+
+click_button 'Click on me too!'
+
+------
+
+#Using button ID
+
+click_button 'coffee' 
+
+------
+
+#Using find and .click_button to search via class & ID
+
+find('button.london').click
+find('button.barcelona').click
+
+
+#Finding buttons with identical values
+
+click_button 'Same button, different div'
+
+Returns error: Capybara::Ambiguous (Ambiguous match, found 2 elements matching visible button "Same button, different div" that is not disabled)
+
+within('div.gird.banana') do
+  click_button "Same button, different div"
+end
+
+within('div.apple') do
+  click_button "Same button, different div"
+end
+
+#Select checkbox using name attribute
+
+check "first-checkbox"
+check "second-checkbox"
+
+
+
+
+
+
