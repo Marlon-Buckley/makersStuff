@@ -6,8 +6,12 @@ get '/' do
 end
 
 get '/cat' do
-  '<img src = "https://i.imgur.com/jFaSxym.png"></img>'
+  "<div style='border: 56px dashed red'>
+  <img src='http://placekitten.com/750/200'>
+</div>"
 end
+
+
 
 # get '/secret' do
 #   "This is a seceret shhhhh!!!"
