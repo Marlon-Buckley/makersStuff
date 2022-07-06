@@ -6,7 +6,8 @@ get '/' do
 end
 
 get '/cat' do
-  erb(:index)
+  @random_name = ["amigo", "misty", "almond"].sample
+  erb(:index)        
 end
 
 
