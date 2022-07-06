@@ -5,13 +5,17 @@ get '/' do
   "Hello World"
 end
 
-get '/secret' do
-  "This is a seceret shhhhh!!!"
+get '/cat' do
+  '<img src = "https://i.imgur.com/jFaSxym.png"></img>'
 end
 
-get '/test' do
-  "This is a test!!!"
-end
+# get '/secret' do
+#   "This is a seceret shhhhh!!!"
+# end
+
+# get '/test' do
+#   "This is a test!!!"
+# end
 
 # get '/favicon.ico' do
 #   <link rel="icon" href="/favicon.ico" />
