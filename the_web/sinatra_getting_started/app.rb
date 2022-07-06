@@ -6,9 +6,7 @@ get '/' do
 end
 
 get '/cat' do
-  "<div style='border: 56px dashed red'>
-  <img src='http://placekitten.com/750/200'>
-</div>"
+  erb(:index)
 end
 
 
