@@ -1,0 +1,7 @@
+In order:
+
+require 'capybara/dsl'
+require 'selenium-webdriver'
+extend Capybara::DSL
+Capybara.default_driver = :selenium
+
