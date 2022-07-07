@@ -1,15 +1,24 @@
-<h1>My name is <%= "#{@name}" %></h1>
 
+
+<% if @name %>
+<h1>My name is <%= "#{@name}" %></h1>
+<% end %>
 
 <% if @name.nil? %>
 
-  <form action="/named-cat">
+<form action="/named-cat">
   <label for="name">Name:</label>
   <input type="text" name="name">
   <button type="submit">Submits</button>
 </form>
  
 <% end %>
+
+<%# #the above is much like doing: %>
+  <%# if @name.nil?
+  puts html_form
+end %>
+
 
 
 <div style = "border: 3px dashed #FFF190">
