@@ -5,15 +5,15 @@ get '/' do
   "Hello World"
 end
 
-get '/random_cat' do
+get '/random-cat' do
   @random_name = ["amigo", "misty", "almond"].sample
   erb(:index)        
 end
 
 get '/named-cat' do
   p params
-  @random_name = params[:name]
-  erb(:index)     
+  @name = params[:name]
+  erb(:index)
 end
 
 
